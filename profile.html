@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo" id="siteLogo">
+            <span class="logo__icon">✏️</span>
+            <h1 class="logo__text">OnlineZZametki</h1>
+        </div>
+        <button class="btn btn--logout">Выйти</button>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="action-buttons">
+            <div id="deleteModal" class="modal hidden">
+                <div class="modal-content">
+                    <h3>Подтвердите удаление</h3>
+                    <p>Введите заголовок заметки для удаления:</p>
+                    <input type="text" id="deleteNoteTitle" placeholder="Заголовок заметки">
+                    <div class="modal-buttons">
+                        <button id="confirmDeleteButton" class="btn btn--primary">Удалить</button>
+                        <button id="cancelDeleteButton" class="btn btn--secondary">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="createNoteButton" class="btn btn--primary">Создать заметку</button>
+        <button id="deleteNoteButton" class="btn btn--secondary">Удалить</button>
+        <!-- Заголовок "Мои заметки" -->
+        <h2 class="notes-title">Мои заметки</h2>
+
+        <!-- Список заметок -->
+        <div id="notesDisplay" class="notes-display"></div>
+
+        <!-- Форма для создания заметки -->
+        <div id="noteFormContainer" class="note-form-container hidden">
+            <form id="noteForm">
+                <h2>Создать заметку</h2>
+                <input type="text" id="noteTitle" placeholder="Заголовок" maxlength="50" required>
+                <textarea id="noteContent" placeholder="Текст заметки" maxlength="1000" required></textarea>
+                <button type="submit" class="btn btn--primary">Сохранить</button>
+                <button type="button" id="cancelNoteButton" class="btn btn--secondary">Отмена</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - OnlineZZametki</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo" id="siteLogo">
+            <span class="logo__icon">✏️</span>
+            <h1 class="logo__text">OnlineZZametki</h1>
+        </div>
+        <div class="header__profile">
+            <button class="btn btn--profile" id="profileButton">Профиль</button>
+        </div>
+    </header>
+
+    <!-- Форма регистрации -->
+    <main class="auth-page">
+        <div class="auth-form">
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <label for="email">Почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn btn--register">Зарегистрироваться</button>
+            </form>
+            <p>Уже есть аккаунт? <a href="/login.html">Войдите</a>.</p>
+
+            <!-- Уведомление об успешной регистрации -->
+            <div class="success-notification" id="successNotification">
+                <span class="success-icon">✅</span>
+                <span class="success-text">Успешная регистрация!</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer__left">
+            <span class="logo__icon">✏️</span>
+            <span class="logo__text">OnlineZZametki</span>
+        </div>
+        <div class="footer__center">
+            <p>2024-2025. Все права защищены. Сайт создан в учебных целях.</p>
+        </div>
+        <div class="footer__right">
+            <a href="#">О сайте</a>
+            <a href="#">Контакты</a>
+            <a href="#">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <!-- Подключение JavaScript -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
